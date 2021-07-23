@@ -44,7 +44,6 @@ geckodriver.log
 *.iml
 
 # jetbrains IDE stuff
-*.iml
 .idea/
 
 # ms IDE stuff
@@ -60,3 +59,6 @@ docs/source/changelog.md
 /project-bike-sharing/Bike-Sharing-Dataset/
 
 datasets/
+data/
+images/
+notebook_ims/
