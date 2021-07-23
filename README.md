@@ -65,4 +65,31 @@ part is that having 4 convolutional layers had 24% on the test data. By adding o
 However, using VGG-16 for pre-trained model, scored a bit more than 70%. Not only did it score moderately, but also over 20 million parameters. 
 This finding led me to reconsider my choice and find more optimal models. The experimentation will be covered in the next notebook. 
 
+### What I learnt
+* split-folders package
+Until I got introduced to this package, I used the manual shuffling, splitting and indexing to divide the values into three categories:
+training, validation, and testing sets. However, it was a tedious and long process. After my first submission, the reviewer
+suggested looking at this module.
+* Preprocessing pipeline
+It took me forever to understand the importance of the transformations' sequence: place the ToTensor() before normalization! At the early stages,
+I didn't follow that structure, and, of course, the code wasn't working. Also, it's important to perform the same transformations
+to the validation and test sets. I was sure that we couldn't alter the test set only.
+* Reshaping the values before the first fully-connected layer  
+It's essential to flatten the values before passing them to fully-connected layers! Otherwise, it won't work.
+* torchsummary package
+When building the architecture, we need to make sure that each layer is correctly instantiated. To double-check the 
+correctness, we need to use torchsummary!   
+
 ---
+
+## TV Script Generator 
+
+
+
+---
+## Face Generator
+
+
+
+---
+## Deploying the Model 
