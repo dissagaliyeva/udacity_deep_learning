@@ -2,11 +2,11 @@
 This folder contains all the solutions to the Nanodegree Program. The major projects are contained in the 'project-XXX' format or below:
 
 1. <a href="https://github.com/issagaliyeva/udacity_deep_learning/tree/master/project-bike-sharing">Bike-Sharing Rentals</a><br>
-<img src="images/bike-sharing.png" width="300" height="300"/><br>
-This is the first case using a vanilla approach with pure numpy package. The objective of the project is to predict the bike rentals within the last month (December) of the second year. 
+![Bike Sharing Final Predictions](images/bike-sharing.png)<br>
+This is the first case using a vanilla approach with pure numpy package. The objective of the project is to predict the bike rentals within the last month (December) of the second year.
 It managed to achieve 0.062 on training set and 0.133 on test set. However, we can see that the December's results are overshooting.
 The majority of people use bikes for work commutes. As we can see, the data we're testing the results on the last days of December. As we saw above, there is an over-prediction in the last days of December. 
-We see such a phenomenon due to the fact that the Neural Network has seen one-year record (since we're witholding the last year for testing purposes). It could not generalize because of the holiday season. The solution to which would be to include more data on consecutive years.
+We see such a phenomenon due to the fact that the Neural Network has seen one-year record (since we're withholding the last year for testing purposes). It could not generalize because of the holiday season. The solution to which would be to include more data on consecutive years.
 ---
 <b>Project Description</b>
 * hour.csv : bike sharing counts aggregated on hourly basis. Records: 17379 hours
@@ -14,7 +14,7 @@ We see such a phenomenon due to the fact that the Neural Network has seen one-ye
 ---
 
 Bike sharing systems are new generation of traditional bike rentals where whole process from membership, rental and return 
-back has become automatic. Through these systems, user is able to easily rent a bike from a particular position and return 
+has become automatic. Through these systems, user is able to easily rent a bike from a particular position and return 
 back at another position. Currently, there are about over 500 bike-sharing programs around the world which is composed of 
 over 500 thousands bicycles. Today, there exists great interest in these systems due to their important role in traffic, 
 environmental and health issues. 
