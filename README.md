@@ -2,7 +2,7 @@
 This folder contains all the solutions to the Nanodegree Program. The major projects are contained in the 'project-XXX' format or below:
 
 1. <a href="https://github.com/issagaliyeva/udacity_deep_learning/tree/master/project-bike-sharing">Bike-Sharing Rentals</a><br>
-![Bike Sharing Final Predictions](images/bike-sharing.png)<br>
+![Bike Sharing Final Predictions](readme_images/bike-sharing.png) <br>
 This is the first case using a vanilla approach with pure numpy package. The objective of the project is to predict the bike rentals within the last month (December) of the second year.
 It managed to achieve 0.062 on training set and 0.133 on test set. However, we can see that the December's results are overshooting.
 The majority of people use bikes for work commutes. As we can see, the data we're testing the results on the last days of December. As we saw above, there is an over-prediction in the last days of December. 
