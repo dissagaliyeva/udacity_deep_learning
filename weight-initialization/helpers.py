@@ -1,6 +1,5 @@
-import numpy as np
 import matplotlib.pyplot as plt
-
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim
@@ -12,7 +11,7 @@ def _get_loss_acc(model, train_loader, valid_loader):
     """
     n_epochs = 2
     learning_rate = 0.001
-    
+
     # Training loss
     criterion = nn.CrossEntropyLoss()
 
@@ -41,7 +40,7 @@ def _get_loss_acc(model, train_loader, valid_loader):
             optimizer.step()
             # record average batch loss 
             loss_batch.append(loss.item())
-             
+
     # after training for 2 epochs, check validation accuracy 
     correct = 0
     total = 0
@@ -54,7 +53,7 @@ def _get_loss_acc(model, train_loader, valid_loader):
         # for which the predicted and true labels are equal
         total += target.size(0)
         correct += (predicted == target).sum()
-      
+
     # calculate the accuracy
     # to convert `correct` from a Tensor into a scalar, use .item()
     valid_acc = correct.item() / total
@@ -94,16 +93,16 @@ def compare_init_weights(
     print('After 2 Epochs:')
     print('Validation Accuracy')
     for label, val_acc in label_accs:
-        print('  {:7.3f}% -- {}'.format(val_acc*100, label))
+        print('  {:7.3f}% -- {}'.format(val_acc * 100, label))
     print('Training Loss')
     for label, loss in label_loss:
         print('  {:7.3f}  -- {}'.format(loss, label))
-        
+
 
 def hist_dist(title, distribution_tensor, hist_range=(-4, 4)):
     """
     Display histogram of values in a given distribution tensor
     """
     plt.title(title)
-    plt.hist(distribution_tensor, np.linspace(*hist_range, num=len(distribution_tensor)//2))
+    plt.hist(distribution_tensor, np.linspace(*hist_range, num=len(distribution_tensor) // 2))
     plt.show()
