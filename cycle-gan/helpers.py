@@ -2,7 +2,7 @@
 
 # import data loading libraries
 import os
-
+import imageio
 import warnings
 
 warnings.filterwarnings("ignore")
@@ -70,10 +70,10 @@ def save_samples(iteration, fixed_Y, fixed_X, G_YtoX, G_XtoY, batch_size=16, sam
 
     merged = merge_images(X, fake_Y, batch_size)
     path = os.path.join(sample_dir, 'sample-{:06d}-X-Y.png'.format(iteration))
-    scipy.misc.imsave(path, merged)
+    imageio.imwrite(path, merged)
     print('Saved {}'.format(path))
 
     merged = merge_images(Y, fake_X, batch_size)
     path = os.path.join(sample_dir, 'sample-{:06d}-Y-X.png'.format(iteration))
-    scipy.misc.imsave(path, merged)
+    imageio.imwrite(path, merged)
     print('Saved {}'.format(path))
